@@ -1,0 +1,391 @@
+#wrapper {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #000;
+    font-family: "mgenplus-2c";
+    font-weight: 500;
+    width: 100vw;
+    height: 100vh;
+}
+
+.moveBefore,
+.moveAfter {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    font-size: 24px;
+    transition: 1.0s;
+}
+
+.moveBefore {
+    left: 0;
+}
+
+.moveAfter {
+    right: 0;
+}
+
+.moveBefore::before,
+.moveAfter::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+}
+
+.moveBefore::before {
+    margin-right: 10px;
+    content: "\f104";
+}
+
+.moveAfter::after {
+    margin-left: 10px;
+    content: "\f105";
+}
+
+
+
+#contentWrapper {
+    position: absolute;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: -100vw;
+    width: 300vw;
+    height: 100%;
+    transition: 1.0s;
+}
+
+#bgColorWrapper {
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 300vw;
+    height: 100%;
+}
+
+#bgColorLeft,
+#bgColorRight {
+    position: absolute;
+    width: 140vw;
+    width: 150vw;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+#bgColorLeft {
+    top: 0;
+    left: 0;
+    background-color: #362D5A;
+    /* border-bottom: 100vh solid #362D5A;
+    border-right: 21vw solid transparent; */
+}
+
+#bgColorRight {
+    top: 0;
+    right: 0;
+    background-color: #A13250;
+    /* border-top: 100vh solid #A13250;
+    border-left: 20vw solid transparent; */
+}
+
+#mainWrapper {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 300vw;
+}
+
+#mainHeader {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300vw;
+    height: 70px;
+}
+
+#headerAboutBar,
+#headerGalleryBar {
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #0E0639;
+    color: #fff;
+    width: auto;
+    height: 100%;
+}
+
+#headerAboutBar {
+    left: 0;
+    padding-left: 100vw;
+}
+
+#headerGalleryBar {
+    right: 0;
+    padding-right: calc(100vw + 70px);
+}
+
+.headerItemWrapper {
+    position: relative;
+}
+
+#headerAboutBar span {
+    font-size: 21px;
+    margin: 0 20px;
+}
+
+#headerGalleryBar .mailBtn {
+    fill: #fff;
+    margin: 0 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 42px;
+    color: #fff;
+}
+
+#headerAboutBar h2,
+#headerGalleryBar h2 {
+    position: absolute;
+    color: #fff;
+    font-size: 232px;
+}
+
+#headerAboutBar h2 {
+    top: -84px;
+    left: -70px;
+}
+
+#headerGalleryBar h2 {
+    top: -84px;
+    left: 85px;
+}
+
+#mainHome,
+#mainAbout,
+#mainGallery {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#mainAbout {
+    background-color: #362D5A;
+    color: rgba(255, 255, 255, 1.0);
+}
+
+#mainHome {
+    color: rgba(255, 255, 255, 1.0);
+    height: 100vh;
+}
+
+#mainGallery {
+    background-color: #A13250;
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.moveBefore,
+.mainContent,
+.moveAfter {
+    color: rgba(255, 255, 255, 1.0);
+}
+
+
+.mainContent {
+    position: relative;
+    font-size: 50px;
+    width: 1120px;
+}
+
+#mainHome .mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainHome .mainContent h1 {
+    font-size: 120px;
+}
+
+#mainAbout .mainContent {
+    margin-bottom: 200px;
+}
+
+#mainAbout .mainContent.mainContentTop {
+    margin-top: 200px;
+}
+
+#mainAbout .mainContent h3 {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    width: 500px;
+    height: 50px;
+    background-color: #0E0639;
+}
+
+#mainAbout .mainContent h3 span {
+    position: absolute;
+    bottom: -20px;
+    font-size: 92px;
+}
+
+.profileBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#mainAbout .mainContent .myImg1 {
+    margin-top: 100px;
+    width: 350px;
+    height: 350px;
+}
+
+.profileTextBox {
+    margin-left: 0px;
+}
+
+.profileTextBox h4 {
+    position: relative;
+    margin-top: 100px;
+    width: 250px;
+    width: 60%;
+    height: 50px;
+    height: 48px;
+    transform: rotate(-5deg);
+    background-color: #A13250;
+}
+
+.profileTextBox h4 span {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    transform: rotate(5deg);
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.profileTextBox p {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 24px;
+    line-height: 52px;
+}
+
+.profileContent {
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 72%;
+}
+
+.skillContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skillContent h4 {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 36px;
+    transform: rotate(-5deg);
+    background-color: #A13250;
+}
+
+.skillContent h4 span {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    transform: rotate(5deg);
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.skillContentBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skillContentItem {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    width: 380px;
+}
+
+.skillContentItem img {
+    height: 80px;
+}
+
+.skillContentItem th {
+    text-align: left;
+    font-size: 27px;
+}
+
+.skillContentItem td {
+    text-align: center;
+    font-size: 21px;
+    /* background-color: #A13250; */
+    width: 90px;
+    padding: 20px 0;
+}
+
+.skillContentItem td .checkGreen {
+    color: #11FF00;
+}
+
+.skillContentItem .skillLevel td {
+    padding: 20px 0 0;
+    font-size: 14px;
+}
+
+.carrerContent {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.carrerContent p {
+    margin-bottom: 25px;
+}
+
+.carrerContent p span::before,
+.carrerContent p span::after {
+    content: '　';
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background-color: #0E0639;
+    font-size: 16px;
+    margin-top: 200px;
+    padding-left: 20px;
+    width: calc(100% - 20px);
+    height: 80px;
+
+}
